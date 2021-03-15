@@ -91,8 +91,13 @@ function mouseReleased(){
 
 function keyPressed(){
     if(keyCode === 32){
-       // slingshot.attach(bird.body);
-    }
+        Matter.Body.setPosition(bird.body,{x:200,y:50});
+        gameState="onSling";
+        bird.trajectory=[];
+            slingshot.attach(bird.body);
+     }
+       
+    
 }
 async function tminus()
 {
